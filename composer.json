@@ -15,7 +15,7 @@
     },
     "require": {
         "php": "^7.1.3",
-        "craftsware/scissor": "^0.0.1"
+        "craftsware/scissor": "dev-master"
     },
     "autoload": {
         "psr-4": {

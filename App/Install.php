@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Scissor (http://craftsware.net/scissor)
+ * Scissor (http://craftsware.net/scissor-project)
  *
  * @author    Ruel Mindo
- * @link      https://github.com/craftsware/scissor
- * @license   https://github.com/craftsware/scissor/LICENSE.md (MIT License)
+ * @link      https://github.com/craftsware/scissor-project
+ * @license   https://github.com/craftsware/scissor-project/LICENSE.md (MIT License)
  * @copyright Copyright (c) 2017 Ruel Mindo
- * @since     0.0.1
+ * @since     1.0.0
  * 
  */
 
@@ -15,9 +15,9 @@ namespace App;
 
 
 use Composer\Factory;
-use Composer\IO\IOInterface;
-use Composer\Json\JsonFile;
 use Composer\Script\Event;
+use Composer\Json\JsonFile;
+use Composer\IO\IOInterface;
 
 
 /**
@@ -25,6 +25,7 @@ use Composer\Script\Event;
  *
  */
 class Install {
+
 
     public static function preInstall(Event $event)
     {
@@ -44,7 +45,10 @@ class Install {
             ]
         ]);
 
-        $io->write("<info>composer.json for Test created.\n</info>");
+        $io->write("<info>Created composer.json for scissor project.\n</info>");
+
+        // Remove after install
+        unlink(__FILE__);
     }
 
 }

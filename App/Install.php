@@ -37,9 +37,9 @@ class Install {
                 'php' => '^7.1.3',
                 'craftsware/scissor' => '^0.0.1'
             ],
-            'autoload': [
-                'psr-4': [
-                    'App\\': 'App'
+            'autoload' => [
+                'psr-4' => [
+                    'App\\' => 'App'
                 ]
             ]
         ]);
